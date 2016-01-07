@@ -1,0 +1,18 @@
+[Service]
+ExecStart=/opt/bin/kubelet \
+  --api_servers=https://<MASTER_HOST> \
+  --register-node=true \
+  --allow-privileged=true \
+  --config=/etc/kubernetes/manifests \
+  --hostname-override=<ADVERTISE_DNS> \
+  --cluster-dns=10.3.0.10 \
+  --cluster-domain=cluster.local \
+  --kubeconfig=/etc/kubernetes/worker-kubeconfig.yaml \
+  --tls-cert-file=/etc/kubernetes/ssl/worker.pem \
+  --tls-private-key-file=/etc/kubernetes/ssl/worker-key.pem \
+  --cadvisor-port=0 \
+  --cloud-provider=aws
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target

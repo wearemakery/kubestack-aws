@@ -1,0 +1,15 @@
+[Service]
+ExecStart=/opt/bin/kubelet \
+  --api_servers=http://127.0.0.1:8080 \
+  --register-node=false \
+  --allow-privileged=true \
+  --config=/etc/kubernetes/manifests \
+  --hostname-override=<ADVERTISE_DNS> \
+  --cluster-dns=10.3.0.10 \
+  --cluster-domain=cluster.local \
+  --cadvisor-port=0 \
+  --cloud-provider=aws
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target
