@@ -10,16 +10,16 @@ variable "region" {
 
 variable "amis" {
   default = {
-    eu-central-1 = "ami-ffafb293"
-    eu-west-1 = "ami-c26bcab1"
-    ap-northeast-1 = "ami-dae8c1b4"
-    ap-southeast-1 = "ami-085a9a6b"
-    ap-southeast-2 = "ami-eeadf58d"
-    us-gov-west-1 = "ami-a98e33c8"
-    sa-east-1 = "ami-4e981c22"
-    us-east-1 = "ami-cbfdb2a1"
-    us-west-1 = "ami-0eacc46e"
-    us-west-2 = "	ami-16cfd277"
+    eu-central-1 = "ami-15190379"
+    eu-west-1 = "ami-2a1fad59"
+    ap-northeast-1 = "ami-02c9c86c"
+    ap-southeast-1 = "ami-00a06963"
+    ap-southeast-2 = "ami-949abdf7"
+    us-gov-west-1 = "ami-e0b70b81"
+    sa-east-1 = "ami-c40784a8"
+    us-east-1 = "ami-7f3a0b15"
+    us-west-1 = "ami-a8aedfc8"
+    us-west-2 = "ami-4f00e32f"
   }
 }
 

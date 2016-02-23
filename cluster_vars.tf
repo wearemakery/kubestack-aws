@@ -1,13 +1,13 @@
 variable "discovery_url" {}
 
 variable "kube_version" {
-  default = "v1.1.3"
+  default = "v1.1.7"
 }
 
 variable "master_count" {
-  default = 1
+  default = 3
 }
 
 variable "worker_count" {
-  default = 1
+  default = 3
 }
